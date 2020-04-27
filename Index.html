@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Project: Scene change</title>
+        <style>
+        #leafers {
+            position: absolute;
+            top: 210px;
+            left: 378px;
+        }
+            
+        </style>
+    </head>
+    <body>
+
+    <img src="beach-with-palm-trees.png">
+
+    <img src="leafers-seedling.png" id="leafers">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $("#leafers").on("click", function(event) {
+            // Do something!
+        });
+        $("#save-button").on("click", function() {
+// handle click event
+}).on("mouseenter", function() {
+// handle click event
+})
+
+        var bigLeafer = function(event) {
+console.log(event);
+$("<img>")
+.attr("src", "leafers-ultimate.png")
+.css("position", "absolute")
+.css("top", event.pageY + "px")
+.css("left", event.pageX + "px")
+.addClass("bigLeafer")
+.appendTo("body");
+}
+
+var daddyLeafer = function(event) {
+$("<p>")
+.text("Hello")
+.css("color", "green")
+.css("position", "absolute")
+.css("top", event.pageY + "px")
+.css("left", event.pageX + "px")
+.appendTo("body");
+}
+
+$("#leafers").on("click", bigLeafer);
+$(".bigLeafer").on("click", daddyLeafer);
+    </script>
+    </body>
